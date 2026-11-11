@@ -1,0 +1,246 @@
+:root {
+    --primary-color: #f59e0b; /* Amarelo/Laranja de alta conversão */
+    --primary-hover: #d97706;
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-dark: #0f172a;
+    --text-body: #334155;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Header */
+.header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.read-time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Layout Principal */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    .main-layout {
+        grid-template-columns: 2.8fr 1.2fr;
+    }
+}
+
+/* Artigo */
+.content {
+    background: var(--bg-card);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.category {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.9rem;
+    color: var(--text-dark);
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    font-size: 1.35rem;
+    color: var(--text-dark);
+    margin: 1.75rem 0 0.75rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+.intro {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.article-list {
+    margin: 1rem 0 1.5rem 1.25rem;
+}
+
+.article-list li {
+    margin-bottom: 0.6rem;
+}
+
+/* Blocos de Anúncio AdSense */
+.adsense-box {
+    background-color: #f1f5f9;
+    border: 1px dashed #cbd5e1;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 1.75rem 0;
+    border-radius: 6px;
+}
+
+/* Card / Banner de Venda (Kiwify) */
+.product-banner {
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.product-tag {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.product-banner h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.product-desc {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-bottom: 1.25rem;
+}
+
+.price-container {
+    margin: 1rem 0 1.5rem;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+}
+
+.price-current {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: block;
+}
+
+.cta-button {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #0f172a;
+    font-weight: 800;
+    font-size: 1.05rem;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s transform 0.1s;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.guarantee-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.widget {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.widget h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.sidebar-ads {
+    min-height: 250px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-card);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 3rem;
+}
